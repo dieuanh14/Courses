@@ -1,0 +1,17 @@
+$c1: #fff;
+$c2: black;
+$c2-1: #2C3639;
+$c2-2:#333333;
+$c3:#01b0f8;
+$c3-1:#4255A4;
+$c3-2:#10285d;
+
+@mixin text($fs: $text-xs, $fw: $font-normal, $c: $c1-600) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+}
+@mixin button($w, $h) {
+  width: $w;
+  height: $h;
+}
