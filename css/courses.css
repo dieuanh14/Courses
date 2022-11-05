@@ -1,0 +1,127 @@
+* {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.header .navbar {
+  display: flex;
+}
+.header .navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.header .navbar a::after {
+  content: "";
+  width: 0;
+  display: block;
+  height: 2px;
+  background-color: #4c5baf;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  /* kieu chuyen dong*/
+}
+.header .logo {
+  margin-left: 2rem;
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+}
+.header .logo span {
+  top: 3px;
+}
+.header ul {
+  background: none;
+}
+.header ul li {
+  color: #fff;
+}
+.header .container {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .navbar-toggler {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+.header .navbar-toggler i {
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.carousel {
+  width: 100%;
+  background-position: center center;
+  height: 500px;
+  background-size: cover;
+  background-image: url("/img/xh1_hero.png.pagespeed.ic.Wpb0SP0e9r.webp");
+}
+.carousel .container {
+  padding: 50px;
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  color: #fff;
+  justify-content: center;
+}
+.carousel .container h1 {
+  font-size: 3rem;
+  font-weight: 10;
+  color: #fff;
+}
+.carousel .container ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+.carousel .container ul.breadcrumb li {
+  display: inline;
+  font-size: 1rem;
+}
+.carousel .container ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: #fff;
+  content: "|";
+}
+.carousel .container ul.breadcrumb li a {
+  color: #fff;
+  text-decoration: none;
+}
+.carousel .container ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.courses h1 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 20;
+  color: #4255A4;
+}
+.courses #list-courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*# sourceMappingURL=courses.css.map */
