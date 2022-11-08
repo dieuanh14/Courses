@@ -20,6 +20,7 @@
       text-decoration: none;
       font-size: 14px;
       margin-left: 20px;
+     
     }
     a::after {
       content: "";
@@ -41,7 +42,6 @@
     font-weight: 700;
     display: block;
     span {
-      //   position: relative;
       top: 3px;
     }
   }
@@ -113,9 +113,9 @@
 }
 
 .courses{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-	h1{
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+	h1{margin-bottom: 2rem;
 		text-align: center;
 		margin-top: 1rem;
 		@include text(1.5rem,20,$c3-1);
@@ -123,5 +123,47 @@
   #list-courses{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    .course{
+      margin-bottom: 2rem;
+    }
   }
+}
+
+.backToTop {
+  a {
+    text-decoration: none;
+    color: $c3-1;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 100;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: rgba(255, 102, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    i {
+      transition: all 0.5s;
+    }
+    &:hover {
+      background-color: rgba(255, 102, 0, 0.8);
+      transform: translateY(-5%);
+      box-shadow: 0.125rem 0.125rem 1rem $c3-1;
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .courses{
+  #list-courses{
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
+}
 }

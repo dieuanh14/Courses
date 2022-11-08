@@ -1,4 +1,7 @@
+
+
 let coursesApi = "http://localhost:3000/courses";
+
 
 function start() {
   getCourses(renderCourses);
@@ -12,11 +15,12 @@ function getCourses(callback) {
     })
     .then(callback);
 }
+
 function renderCourses(courses) {
   let listCoursesBlock = document.querySelector("#list-courses");
   let htmls = courses.map(function (course) {
     return `
-	<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+	<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 course">
     <a href="#">
         <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="">
     </a>
@@ -33,5 +37,57 @@ function renderCourses(courses) {
 </div>
 `;
   });
-  listCoursesBlock.innerHTML = htmls.join('');
+  listCoursesBlock.innerHTML = htmls.join("");
 }
+
+
+const data = {
+  courses: [
+    {
+      name: "JavScript",
+      description:
+        "JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.",
+      id: 1,
+    },
+    {
+      name: "ReactJs",
+      description:
+        "React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.",
+      id: 2,
+    },
+    {
+      name: "C#",
+      description:
+        "C# is a general-purpose, high-level multi-paradigm programming language. C# encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented, and component-oriented programming disciplines.",
+      id: 3,
+    },
+    {
+      name: "Java",
+      description:
+        "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+      id: 4,
+    },
+    {
+      name: "C++",
+      description:
+        "C++ is a high-level general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or C with Classes",
+      id: 5,
+    },
+    {
+      name: "Ruby on Rails",
+      description:
+        "Ruby on Rails is a server-side web application framework written in Ruby under the MIT License. Rails is a model–view–controller framework, providing default structures for a database, a web service, and web pages.",
+      id: 6,
+    },
+    {
+      name: "Python",
+      description:
+        "Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured, object-oriented and functional programming. ",
+      id: 7,
+    },
+  ],
+};
+let searchValue=document.querySelector('');
+
+const search = Object.keys(data.courses.filter(course => course.name == 'JavScript'));
+console.log(data.courses[search]);
