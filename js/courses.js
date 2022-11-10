@@ -1,7 +1,4 @@
-
-
 let coursesApi = "http://localhost:3000/courses";
-
 
 function start() {
   getCourses(renderCourses);
@@ -39,7 +36,6 @@ function renderCourses(courses) {
   });
   listCoursesBlock.innerHTML = htmls.join("");
 }
-
 
 const data = {
   courses: [
@@ -80,14 +76,30 @@ const data = {
       id: 6,
     },
     {
-      name: "Python",
-      description:
-        "Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured, object-oriented and functional programming. ",
-      id: 7,
+      "name": "HTML",
+      "description": "HTML is a markup language designed to create web pages on the World Wide Web. It can be helped by technologies like CSS and JavaScript-like scripting languages.",
+      "id": 7
     },
+    {
+      "name": "NODEJS",
+      "description": "Node. js (Node) is an open source development platform for executing JavaScript code server-side. Node is useful for developing applications that require a persistent connection from the browser to the server and is often used for real-time applications such as chat, news feeds and web push notifications.",
+      "id": 8
+    },
+    {
+      "name": "SCSS",
+      "description": "The term SCSS is an acronym for Sassy Cascading Style Sheets. It is basically a more advanced and evolved variant of the CSS language. Natalie Weizenbaum and Chris Eppstein created it, and Hampton Catlin designed it. It comes with more advanced features- thus often called Sassy CSS.",
+      "id": 9
+    }
   ],
 };
-let searchValue=document.querySelector('');
 
-const search = Object.keys(data.courses.filter(course => course.name == 'JavScript'));
-console.log(data.courses[search]);
+const searchBar = document.getElementById("default-search");
+let courses = [];
+searchBar.addEventListener("keyup", (e) => {
+  const searchString = e.target.value.toLowerCase();
+  const filteredValue = data.courses.filter((course) => {
+    return course.name.toLowerCase().trim().includes(searchString);
+  });
+  renderCourses(filteredValue)
+});
+

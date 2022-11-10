@@ -29,6 +29,21 @@
       "name": "JavaScipt",
       "description": "JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.",
       "id": 6
+    },
+    {
+      "name": "HTML",
+      "description": "HTML is a markup language designed to create web pages on the World Wide Web. It can be helped by technologies like CSS and JavaScript-like scripting languages.",
+      "id": 7
+    },
+    {
+      "name": "NODEJS",
+      "description": "Node. js (Node) is an open source development platform for executing JavaScript code server-side. Node is useful for developing applications that require a persistent connection from the browser to the server and is often used for real-time applications such as chat, news feeds and web push notifications.",
+      "id": 8
+    },
+    {
+      "name": "SCSS",
+      "description": "The term SCSS is an acronym for Sassy Cascading Style Sheets. It is basically a more advanced and evolved variant of the CSS language. Natalie Weizenbaum and Chris Eppstein created it, and Hampton Catlin designed it. It comes with more advanced features- thus often called Sassy CSS.",
+      "id": 9
     }
   ]
 }

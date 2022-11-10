@@ -47,7 +47,7 @@
 .header ul {
   background: none;
 }
-.header ul li {
+.header ul li .active {
   color: #fff;
 }
 .header .container {
@@ -108,6 +108,10 @@
   text-decoration: underline;
 }
 
+.courses form {
+  display: flex;
+  justify-content: flex-end;
+}
 .courses h1 {
   margin-bottom: 2rem;
   text-align: center;
@@ -117,6 +121,7 @@
   color: #4255A4;
 }
 .courses #list-courses {
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -150,6 +155,12 @@
 }
 .backToTop a:hover i {
   transform: rotate(180deg);
+}
+
+footer {
+  color: #fff;
+  background-color: #4255A4;
+  margin-top: 15rem;
 }
 
 @media (max-width: 375px) {

@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-
 }
 .header {
   width: 100%;
@@ -20,7 +19,6 @@
       text-decoration: none;
       font-size: 14px;
       margin-left: 20px;
-     
     }
     a::after {
       content: "";
@@ -48,7 +46,9 @@
   ul {
     background: none;
     li {
-      color: $c1;
+      .active {
+        color: $c1;
+      }
     }
   }
   .container {
@@ -84,46 +84,50 @@
     h1 {
       @include text(3rem, 10, $c1);
     }
-	ul.breadcrumb {
-		padding: 10px 16px;
-		list-style: none;
-	  }
-	  
-	  ul.breadcrumb li {
-		display: inline;
-		font-size: 1rem;
-	  }
-	  
-	  ul.breadcrumb li+li:before {
-		padding: 8px;
-		color: $c1;
-		content: "|";
-	  }
-	  
-	  ul.breadcrumb li a {
-		color: $c1;
-		text-decoration: none;
-	  }
-	  
-	  ul.breadcrumb li a:hover {
-		color: #01447e;
-		text-decoration: underline;
-	  }
+    ul.breadcrumb {
+      padding: 10px 16px;
+      list-style: none;
+    }
+
+    ul.breadcrumb li {
+      display: inline;
+      font-size: 1rem;
+    }
+
+    ul.breadcrumb li + li:before {
+      padding: 8px;
+      color: $c1;
+      content: "|";
+    }
+
+    ul.breadcrumb li a {
+      color: $c1;
+      text-decoration: none;
+    }
+
+    ul.breadcrumb li a:hover {
+      color: #01447e;
+      text-decoration: underline;
+    }
   }
 }
 
-.courses{
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr;
-	h1{margin-bottom: 2rem;
-		text-align: center;
-		margin-top: 1rem;
-		@include text(1.5rem,20,$c3-1);
-	}
-  #list-courses{
+.courses {
+  form {
+    display: flex;
+    justify-content: flex-end;
+  }
+  h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+    @include text(1.5rem, 20, $c3-1);
+  }
+  #list-courses {
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    .course{
+    .course {
       margin-bottom: 2rem;
     }
   }
@@ -158,12 +162,17 @@
     }
   }
 }
+footer {
+  color: $c1;
+  background-color: $c3-1;
+  margin-top: 15rem;
+}
 
 @media (max-width: 375px) {
-  .courses{
-  #list-courses{
-    display: grid;
-    grid-template-columns: 1fr ;
+  .courses {
+    #list-courses {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
   }
-}
 }
